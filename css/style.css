@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap");
+body {
+  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.wrapper-inner--wide {
+  max-width: 1200px;
+}
+/*# sourceMappingURL=style.css.map */

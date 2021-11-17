@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+
+//=========== MIXIN ============
+@mixin roboto {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+@mixin quicksand {
+    
+    font-family: 'Quicksand', sans-serif;
+}
+//=========== /MIXIN ==============
+
+
+
+// ========== VARIABLES ============= 
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+// ========== /VARIABLES ============= 
+
+
+//=========== COMMON ==================
+body{
+    @include roboto;
+}
+
+.wrapper-inner{
+    max-width: 900px;
+    margin: 0 auto;
+    
+    &--wide{
+        max-width: 1200px;
+    }
+}
+.wrapper-outer{}
+//=========== /COMMON ==================
+
+
+// ========= HEADER =========
+.section-header{
+
+}
+// ========= /HEADER =========
+
+// ======== HERO-IMAGE ========
+.section-hero-image{}
+// ======== /HERO-IMAGE ========
+
+// ======== CUSTOMERS ==========
+.section-customers{}
+// ======== /CUSTOMERS ==========
+
+// ======== PLAN-AND-MANAGE =======
+.section-plan-and-manage
+// ======== /PLAN-AND-MANAGE =======
+
+// ======== FEATURES ===============
+.section-features{}
+// ======== /FEATURES ===============
+
+// ======== STATS ==================
+.section-stats{}
+// ======== /STATS ==================
+
+// ======== BLOG ===================
+.section-blog{}
+// ======== /BLOG ===================
+
+// ======== QUOTES ================
+.section-quotes{}
+// ======== /QUOTES ================
+
+// ======== GET-STARTED ===========
+.section-get-started{}
+// ======== /GET-STARTED ===========
+
+// ======== FAQ ================
+.section-faq{}
+// ======== /FAQ ================
+
+// ======== NEWSLETTER ==========
+.section-newsletter{}
+// ======== /NEWSLETTER ==========
+
+// ========  FOOTER ==============
+.section-footer{}
+// ========  /FOOTER ==============
