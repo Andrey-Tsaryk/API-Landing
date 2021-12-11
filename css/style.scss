@@ -3,7 +3,7 @@
 
 //=========== MIXIN ============
 @mixin roboto {
-    font-family: 'Inter', sans-serif;
+    // font-family: 'Inter', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
 @mixin quicksand {
@@ -15,45 +15,116 @@
 
 
 // ========== VARIABLES ============= 
+$base: 4px;
 $fw-regular: 400;
 $fw-medium: 500;
 $fw-bold: 700;
+
+$padding-vertical-xs: $base * 5;
+$padding-vertical-sm: $base * 15;
+$padding-vertical: $base * 30;
+
+$color-divider: #d8e3fe;
+$transition: .2s;
 // ========== /VARIABLES ============= 
 
 
 //=========== COMMON ==================
-body{
+
+body {
     @include roboto;
 }
 
-.wrapper-inner{
+.section-outer{
+    border-bottom: 1px solid $color-divider;
+}
+
+.section-inner{
     max-width: 900px;
+    padding-top: $padding-vertical;
+    padding-bottom: $padding-vertical;
     margin: 0 auto;
-    
+
     &--wide{
         max-width: 1200px;
     }
 }
-.wrapper-outer{}
+ 
 //=========== /COMMON ==================
 
 
 // ========= HEADER =========
 .section-header{
+    .section-inner{
+        padding-top: $padding-vertical-xs;
+        padding-bottom: $padding-vertical-xs;
+    }
 
+}
+
+.main-navigation{
+    display: flex;
+}
+
+.logo{
+    width: $base * 6;
+    height: $base * 6;
+    background-color: #5e81fe;
+    border-radius: 100%;
+}
+
+.nav-wrapper{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+
+    &__item{
+        & + &{
+            margin-left: $base * 10;
+        }
+        &-link{
+            @include quicksand;
+
+            font-size: 12px;
+            color: #697ca6;
+            text-decoration: none;
+            font-weight: $fw-medium;
+            transition: $transition;
+
+            &:hover{
+                color: #5e81fe;
+            }
+
+            &--active{
+                font-weight: $fw-bold;
+                color: #5e81fe;
+            }
+        }
+    }
 }
 // ========= /HEADER =========
 
 // ======== HERO-IMAGE ========
-.section-hero-image{}
+.section-hero-image{
+    background-color: #f4f7ff;
+}
 // ======== /HERO-IMAGE ========
 
 // ======== CUSTOMERS ==========
-.section-customers{}
+.section-customers{
+    .section-inner{
+        padding-top: $padding-vertical-sm;
+        padding-bottom: $padding-vertical-sm;
+    }
+}
 // ======== /CUSTOMERS ==========
 
 // ======== PLAN-AND-MANAGE =======
-.section-plan-and-manage
+.section-plan-and-manage{
+    background-color: #f5f8ff;
+}
 // ======== /PLAN-AND-MANAGE =======
 
 // ======== FEATURES ===============
@@ -61,19 +132,31 @@ body{
 // ======== /FEATURES ===============
 
 // ======== STATS ==================
-.section-stats{}
+.section-stats{
+    background-color: #e9efff;
+    .section-inner{
+        padding-top: $padding-vertical-sm;
+        padding-bottom: $padding-vertical-sm;
+    }
+}
 // ======== /STATS ==================
 
 // ======== BLOG ===================
-.section-blog{}
+.section-blog{
+    background-color: #f5f8ff;
+}
 // ======== /BLOG ===================
 
 // ======== QUOTES ================
-.section-quotes{}
+.section-quotes{
+    background-color: #eaf0ff;
+}
 // ======== /QUOTES ================
 
 // ======== GET-STARTED ===========
-.section-get-started{}
+.section-get-started{
+    background-color: #6888ff;
+}
 // ======== /GET-STARTED ===========
 
 // ======== FAQ ================
@@ -81,9 +164,17 @@ body{
 // ======== /FAQ ================
 
 // ======== NEWSLETTER ==========
-.section-newsletter{}
+.section-newsletter{
+    background-color: #fcfdff;
+}
 // ======== /NEWSLETTER ==========
 
 // ========  FOOTER ==============
-.section-footer{}
+.section-footer{
+    border-bottom: 0;
+    .section-inner{
+        padding-top: $padding-vertical-sm;
+        padding-bottom: $padding-vertical-sm;
+    }
+}
 // ========  /FOOTER ==============
